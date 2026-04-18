@@ -1,0 +1,275 @@
+/* 
+   style.css: デザインを決めるファイルです。
+*/
+
+:root {
+    --primary-white: #ffffff;
+    --sand-beige: #f9f9f5;
+    --accent-indigo: #1a237e;
+    --text-main: #222222;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 2.0;
+    color: var(--text-main);
+    background-color: var(--primary-white);
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--text-main);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-indigo);
+    opacity: 0.6;
+}
+
+/* 各セクション */
+section {
+    padding: 120px 10%;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+}
+
+/* ヒーローエリア */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sand-beige);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 6px;
+    line-height: 1.5;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+}
+
+.btn:hover {
+    background-color: var(--text-main);
+    color: white;
+}
+
+/* 首里織コーナー */
+.techniques {
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.tech-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+/* ショップコーナー（シンプル版） */
+.shop-card {
+    background-color: var(--sand-beige);
+    padding: 60px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto; /* 中央寄せにします */
+}
+
+.shop-simple {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.shop-simple h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.shop-simple p {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 市松模様（互い違い）ギャラリーのルール */
+.checker-gallery {
+    display: flex;
+    flex-direction: column; /* 縦に並べていきます */
+    gap: 60px; /* それぞれの段の間に広めのすき間をあけます */
+    margin-top: 60px;
+}
+
+/* 1段（写真と文章のセット）のルール */
+.checker-row {
+    display: flex;
+    align-items: center; /* 高さを真ん中にそろえます */
+    gap: 40px; /* 写真と文章の間のすき間です */
+}
+
+/* 逆向き（文章が左、写真が右）にするルール */
+.checker-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 写真と文章を入れる箱の大きさ（半分ずつ） */
+.checker-img, .checker-text {
+    flex: 1; 
+}
+
+/* 写真自体のルール */
+.checker-img img {
+    width: 100%; /* 箱の幅いっぱいに広げます */
+    height: auto;
+    border-radius: 12px; /* 少し丸みをつけて優しい感じにします */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* ふんわりとした影をつけます */
+    /* ※大きく動くアクションはやめて、落ち着いた見た目にしました */
+}
+
+/* 文章のタイトルのルール */
+.checker-text h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--accent-indigo); /* タイトルは少し青色にします */
+}
+
+/* 文章の中身のルール */
+.checker-text p {
+    font-size: 1rem;
+    line-height: 2.0; /* 行と行の間を広くして読みやすくします */
+    text-align: left; /* 文章を左側にきちんとそろえます */
+}
+
+/* レスポンシブ設計 */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    /* スマホ画面では横並びをやめて、縦一列に並べ直します */
+    .checker-row, .checker-row.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 60px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    border-top: 1px solid #f0f0f0;
+}
+
+/* =========================================
+   フワッと出てくる魔法のルール
+========================================= */
+.fade-in {
+    opacity: 0; /* 最初は透明（見えない状態）にしておきます */
+    transform: translateY(30px); /* 少し下の方にずらしておきます */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 0.5秒かけてスッと変化させるルールです */
+}
+
+/* 画面に入って「見えたよ！」の目印がついたときのルール */
+.fade-in.is-visible {
+    opacity: 1; /* はっきりと見えるようにします */
+    transform: translateY(0); /* 元の正しい位置に戻します */
+}
