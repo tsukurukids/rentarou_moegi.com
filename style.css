@@ -149,7 +149,8 @@ h2 {
     padding: 60px;
     text-align: center;
     max-width: 900px;
-    margin: 0 auto; /* 中央寄せにします */
+    margin: 0 auto;
+    /* 中央寄せにします */
 }
 
 .shop-simple {
@@ -173,16 +174,20 @@ h2 {
 /* 市松模様（互い違い）ギャラリーのルール */
 .checker-gallery {
     display: flex;
-    flex-direction: column; /* 縦に並べていきます */
-    gap: 60px; /* それぞれの段の間に広めのすき間をあけます */
+    flex-direction: column;
+    /* 縦に並べていきます */
+    gap: 60px;
+    /* それぞれの段の間に広めのすき間をあけます */
     margin-top: 60px;
 }
 
 /* 1段（写真と文章のセット）のルール */
 .checker-row {
     display: flex;
-    align-items: center; /* 高さを真ん中にそろえます */
-    gap: 40px; /* 写真と文章の間のすき間です */
+    align-items: center;
+    /* 高さを真ん中にそろえます */
+    gap: 40px;
+    /* 写真と文章の間のすき間です */
 }
 
 /* 逆向き（文章が左、写真が右）にするルール */
@@ -191,16 +196,20 @@ h2 {
 }
 
 /* 写真と文章を入れる箱の大きさ（半分ずつ） */
-.checker-img, .checker-text {
-    flex: 1; 
+.checker-img,
+.checker-text {
+    flex: 1;
 }
 
 /* 写真自体のルール */
 .checker-img img {
-    width: 100%; /* 箱の幅いっぱいに広げます */
+    width: 100%;
+    /* 箱の幅いっぱいに広げます */
     height: auto;
-    border-radius: 12px; /* 少し丸みをつけて優しい感じにします */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* ふんわりとした影をつけます */
+    border-radius: 12px;
+    /* 少し丸みをつけて優しい感じにします */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* ふんわりとした影をつけます */
     /* ※大きく動くアクションはやめて、落ち着いた見た目にしました */
 }
 
@@ -209,14 +218,17 @@ h2 {
     font-size: 1.4rem;
     font-weight: 400;
     margin-bottom: 15px;
-    color: var(--accent-indigo); /* タイトルは少し青色にします */
+    color: var(--accent-indigo);
+    /* タイトルは少し青色にします */
 }
 
 /* 文章の中身のルール */
 .checker-text p {
     font-size: 1rem;
-    line-height: 2.0; /* 行と行の間を広くして読みやすくします */
-    text-align: left; /* 文章を左側にきちんとそろえます */
+    line-height: 2.0;
+    /* 行と行の間を広くして読みやすくします */
+    text-align: left;
+    /* 文章を左側にきちんとそろえます */
 }
 
 /* レスポンシブ設計 */
@@ -243,7 +255,8 @@ h2 {
     }
 
     /* スマホ画面では横並びをやめて、縦一列に並べ直します */
-    .checker-row, .checker-row.reverse {
+    .checker-row,
+    .checker-row.reverse {
         flex-direction: column;
         gap: 20px;
     }
@@ -263,13 +276,18 @@ footer {
    フワッと出てくる魔法のルール
 ========================================= */
 .fade-in {
-    opacity: 0; /* 最初は透明（見えない状態）にしておきます */
-    transform: translateY(30px); /* 少し下の方にずらしておきます */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 0.5秒かけてスッと変化させるルールです */
+    opacity: 0;
+    /* 最初は透明（見えない状態）にしておきます */
+    transform: translateY(30px);
+    /* 少し下の方にずらしておきます */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* 0.5秒かけてスッと変化させるルールです */
 }
 
 /* 画面に入って「見えたよ！」の目印がついたときのルール */
 .fade-in.is-visible {
-    opacity: 1; /* はっきりと見えるようにします */
-    transform: translateY(0); /* 元の正しい位置に戻します */
+    opacity: 1;
+    /* はっきりと見えるようにします */
+    transform: translateY(0);
+    /* 元の正しい位置に戻します */
 }
