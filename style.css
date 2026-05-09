@@ -91,12 +91,17 @@ h2 {
 
 /* ヒーローエリア */
 .hero {
-    height: 90vh;
+    height: 80vh; /* 少し高さを調整しました */
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--sand-beige);
     text-align: center;
+    /* 角を丸くして、箱のような形にします */
+    margin: 20px auto;
+    width: 92%;
+    max-width: 1200px;
+    border-radius: 80px;
 }
 
 .hero h1 {
